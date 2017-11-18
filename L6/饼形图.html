@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				margin: 0px auto;
+				width: 400px;
+				height: 400px;
+			}
+			#canvas{
+				border: solid 1px red;
+				width: 400px;
+				height: 400px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+		<canvas id="canvas" width="800" height="800"></canvas>
+		</div>
+		<script type="text/javascript">
+			var tangram=[	{p:[{x:0,y:0},{x:800,y:0},{x:400,y:400}],color:"#caff67"},
+							{p:[{x:0,y:0},{x:400,y:400},{x:0,y:800}],color:"#67becf"},
+							{p:[{x:800,y:0},{x:800,y:400},{x:600,y:600},{x:600,y:200}],color:"#ef3d61"},
+							{p:[{x:600,y:200},{x:600,y:600},{x:400,y:400}],color:"#f9f51a"},
+							{p:[{x:400,y:400},{x:600,y:600},{x:400,y:800},{x:200,y:600}],color:"#a54c09"},
+							{p:[{x:200,y:600},{x:400,y:800},{x:0,y:800}],color:"#fa8ccc"},
+							{p:[{x:800,y:400},{x:800,y:800},{x:400,y:800}],color:"#f6ca29"}
+						]
+			
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext("2d");
+	        var color=["#caff67","#67becf","#ef3d61","#f9f51a","#a54c09","#fa8ccc","#f6ca29"];
+			var d=[45,38,62,75,25,102,13];
+			var start=0;
+			var end=0;
+			function bing1(x,y,r){
+				context.save();
+			    context.translate(x,y);
+			    for(var i=0;i<color.length;i++){
+			     context.beginPath();
+		         end+=Math.PI/180*d[i];
+			     context.arc(0,0,r,start,end);
+		         context.lineTo(0,0);
+			     context.fillStyle=color[i];
+			     context.fill();
+			     start+=Math.PI/180*d[i];
+			    }
+			      context.restore();
+			}
+			bing1(100,100,100);
+			bing1(600,100,50);
+	
+		function zhu(){
+			for(var i=0;i<color.length;i++){
+			var width=50;
+		  	var h=d[i]*2;
+		  	var y=400-h;
+		  	var x=20+50*i;
+		  	context.save();
+		  	context.beginPath();
+		  	context.translate(x+width,0);
+		    context.fillStyle=color[i];
+		    context.fillRect(x,y,width,h);
+		    context.restore();
+		   }
+		}
+		zhu();	
+		
+		function line(){
+			var a=10;
+			var b=650;
+			for(var i=0;i<color.length;i++){
+				var x=40+100*i;
+				var y=700-d[i]*2;
+				context.beginPath();
+				context.strokeStyle=color[i];
+				context.save();
+				context.lineTo(a,b);
+				context.lineTo(x,y);
+				context.lineWidth=10;
+				context.stroke();
+				context.restore();
+				a=x;
+				b=y;
+			}
+		}
+		line();
+		
+		</script>
+	</body>
+</html>
+
