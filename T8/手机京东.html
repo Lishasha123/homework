@@ -715,7 +715,7 @@
 			var slide = document.querySelector(".leftlist");
 			var ul = document.querySelector(".leftlist ul");
 			var slide2=document.querySelector(".rightlist");
-			var ul2=document.querySelector(".list1")
+		
 			var startY = 0;
 			var topOffset = 0;
 			console.log(slide);
@@ -764,25 +764,25 @@
 				var y = e.touches[0].pageY;
 				var t = topOffset + y - startY;
 				
-			    if(t<($(".rightlist").height()-$(".top").height()-$(".list1").height()-150)){
-			    	t=$(".rightlist").height()-$(".top").height()-$(".list1").height()-150;
+			    if(t<($(".rightlist").height()-$(".top").height()-$(".rightlist .list1").height()-150)){
+			    	t=$(".rightlist").height()-$(".top").height()-$(".rightlist .list1").height()-150;
 			    }
 				t = t>150?150:t;
-				ul2.style.top = t+"px";
+				$(".rightlist .list1").css("top",t+"px");
 			}
 			
 			slide2.ontouchend = function(e){
 				var y = e.changedTouches[0].pageY;
 				var t = topOffset + y - startY;
-				var h=$(".rightlist").height()-$(".top").height()-($(".list1").height()+t);
+				var h=$(".rightlist").height()-$(".top").height()-($(".rightlist .list1").height()+t);
 				
 				if(t>0){
-					$(".list1").animate({top:"0px"},300);
+					$(".rightlist .list1").animate({top:"0px"},300);
 					t = 0;
 				}
 				if(h>0){
-					t=$(".rightlist").height()-$(".top").height()-$(".list1").height();
-					$(".list1").animate({top:t+"px"},300);
+					t=$(".rightlist").height()-$(".top").height()-$(".rightlist .list1").height();
+					$(".rightlist .list1").animate({top:t+"px"},300);
 					
 				}
 				topOffset = t;
