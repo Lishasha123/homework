@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="banner">
+			<div class="zuo"><span>〈</span></div>
+			<ul>
+			<li><img src="img/banner/jd.banner1.jpg" /></li>
+			<li><img src="img/banner/jd.banner2.jpg" /></li>
+			<li><img src="img/banner/jd.banner3.jpg" /></li>
+			<li><img src="img/banner/jd.banner4.jpg" /></li>
+			<li><img src="img/banner/jd.banner5.jpg" /></li>
+			<li><img src="img/banner/jd.banner6.jpg" /></li>
+			<li><img src="img/banner/jd.banner7.jpg" /></li>
+			</ul>
+			<div class="points"></div>
+			<div class="you"><span>〉</span></div>
+			
+		</div>
+		<div class="top clear">
+			<dl>
+				<dt></dt>
+				<dd>京东超市</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd>全球购</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd>京东服饰</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd>京东生鲜</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd>京东到家</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd>充值缴费</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd>领京逗</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd>领券</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd>赚钱</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd>物流查询</dd>
+			</dl>
+		</div>
+		
+		<div class="img">
+			<img src="img/banner/jd.banner2.jpg"/>
+		
+		<div class="news clear">
+			<div class="news-left"><span>京东<strong>快报</strong> :</span></div>
+			<div class="news-left-list">
+				<ul>
+					<li>小丑女的自拍秘诀尽然是这个</li>
+					<li><strong>热门</strong> 小丑女的自拍秘诀尽然是这个</li>
+					<li>小丑女的自拍秘诀尽然是这个</li>
+					<li><strong>推荐</strong> 小丑女的自拍秘诀尽然是这个</li>
+					<li>小丑女的自拍秘诀尽然是这个</li>
+					<li>小丑女的自拍秘诀尽然是这个</li>
+					<li><strong>热门</strong> 小丑女的自拍秘诀尽然是这个</li>
+					<li><strong>推荐</strong> 小丑女的自拍秘诀尽然是这个</li>
+					<li>小丑女的自拍秘诀尽然是这个</li>
+					<li><strong>推荐</strong> 小丑女的自拍秘诀尽然是这个</li>
+					<li>小丑女的自拍秘诀尽然是这个</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		
+		
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript">
+			var count=$(".banner ul li").length;
+			var index=0;
+			var widths=$(".banner ul li").width();
+			console.log(widths);
+			for(var i=0;i<count;i++){
+			$(".points").append("<span></span>");
+		    }
+		   $(".points").css("margin-left",-1*count*0.15+"rem");
+		   $(".points span").eq(0).addClass("active");
+		   
+		   // 第一张图克隆添加到最后
+			var first = $(".banner ul li:first-child").clone(true);
+				$(".banner ul").append(first);
+		   $(".banner ul").css("width",widths*(count+1)+"px");
+		   setInterval(function(){
+		   	 index=(index+1)%count;
+		      $(".points span").removeClass("active").eq(index).addClass("active");
+		   	 
+		   	 if(index==0){
+		   	  $(".banner ul").animate({left:widths*count*-1+"px"},300,function(){
+		   	  	 $(".banner ul").css("left","0px"); 
+		   	  });
+		   	 
+		   	 }else{
+		   	 	$(".banner ul").animate({left:widths*index*-1+"px"},300);
+		   	 }
+		   	 
+		   },2000);
+		   
+		   
+		 var h=$(".news-left-list ul li").height();
+		 var num=$(".news-left-list ul li").length;
+		 var s=0;
+		 console.log(num);
+		 var first1 = $(".news-left-list ul li:first-child").clone(true);
+				$(".news-left-list ul").append(first1);
+	    setInterval(function(){
+	   	 s=(s+1)%num;
+	   	 if(s==0){
+	   	  $(".news-left-list ul").animate({top:h*num*-1+"px"},300,function(){
+	   	  	$(".news-left-list ul").css("top","0px"); 
+	   	  });
+	   	 }else{
+	   	  $(".news-left-list ul").animate({top:h*index*-1+"px"},300);	
+	   	 }
+	   	
+	   },1000);
+	  
+		</script>
+	</body>
+</html>
