@@ -5,6 +5,7 @@ body{
 	margin: 0px;
 	font-family: "微软雅黑";
 	background-color: #dddddd;
+	font-size: 0.14rem;
 }
 ul,li,dl,dt,dd{
   margin: 0px;
@@ -21,6 +22,18 @@ a{
 	display: block;
 	clear: both;
 	height: 0px;
+}
+.main{
+	width: 100%;
+	height: 100vh;
+	background-color: red;
+	position: relative;
+}
+.main-1{
+	width: inherit;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
 }
 .banner{
 	width: 7.5rem;
@@ -45,7 +58,7 @@ a{
 .points{
 	position: absolute;
 	left: 50%;
-	top:60%;
+	top:90%;
 }
 .points span{
 	display: inline-block;
@@ -111,7 +124,6 @@ a{
 	margin: 0px auto;
 	margin-top: 0.3rem;
 	width: 7.3rem;
-	background-color: #ffffff;
 	
 }
 .img img{
@@ -119,16 +131,17 @@ a{
 	height: 2rem;
 	border-radius: 1rem;
 	margin: 0.1rem 0rem;
+	
 }
 .news{
 	overflow: hidden;
+	background-color: #ffffff;
 }
 .news-left{
 	float: left;
     margin-left: 0.1rem;
 	width: 1.6rem;
 	font-size: 0.26rem;
-	background-color: yellow;
 }
 
 .news-left strong{
@@ -149,8 +162,161 @@ a{
 	left: 0rem;
 }
 .news-left-list li{
-	background-color: yellow;
 }
 .news-left-list li strong{
 	color: red;
+}
+.news-right{
+	float: right;
+	font-size: 0.2rem;
+	margin-right: 0.1rem;
+}
+/*秒杀*/
+
+.tem{
+	margin-top: 0.1rem;
+	background-color: #ffffff;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	
+}
+.tem-left{
+    float: left;
+	padding: 0rem;
+	margin-left: 0.1rem;
+}
+.tem-left b{
+	font-size: 0.26rem;
+	color: #f34e4e;
+}
+.tem-left strong{
+	font-size: 0.26rem;
+}
+.tem-left span{
+	font-size: 0.16rem;
+}
+.tem-left .hour,.s,.m{
+	margin: 0rem 0.05rem;
+	display: inline-block;
+	width: 0.3rem;
+	height: 0.3rem;
+	border: solid 1px #dddddd;
+	text-align: center;
+	line-height: 0.3rem;
+}
+.tem-right{
+    margin-right: 0.1rem;
+	float: right;
+	font-size: 0.16rem;
+}
+.box1{
+	width: 100%;
+	height: 2.2rem;
+	background-color: #ffffff;
+	position: relative;
+	overflow: hidden;
+}
+.show{
+	width: 44rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	background-color: red;
+}
+.show dl{
+	float: left;
+	width: 2.2rem;
+	text-align: center;
+	background-color: #ffffff;
+	
+}
+.show dt{
+    padding: 0.01rem;	
+	border-right: solid 1px #dddddd;
+}
+.show dl dt img{
+	width: 2rem;
+	height: 1.5rem;
+}
+.show dl dd{
+	margin-top: 0.05rem;
+}
+.show dl dd strong{
+	color: #FF0000;
+}
+.show dl dd span{
+	text-decoration: line-through;
+}
+.show1{
+	width: 100%;
+	background-color: #ffffff;
+}
+.show1 dl{
+	float: left;
+	padding: 0.1rem 0.2rem;
+	border-top: solid 1px #dddddd;
+	border-right: solid 1px #dddddd;
+}
+.show1 dl dt{
+	margin-top: 0.05rem;
+}
+.show1 dl dd{
+	margin-top: 0.1rem;
+	width: 3.32rem;
+}
+.show1 dl dd img{
+	width: 1.66rem;
+	height: 1.66rem;
+}
+.show1 dl dt:first-child{
+	font-size: 0.2rem;
+}
+/*爱生活*/
+.bg img{
+	width: 100%;
+	height: 0.76rem;
+}
+.show2{
+  width: 100%;
+  background-color: #ffffff;	
+}
+.show2 dl{
+	float: left;
+	padding: 0.1rem 0.095rem;
+	border-top: solid 1px #dddddd;
+	border-right: solid 1px #dddddd;
+}
+.show2 dl dt{
+	margin-top: 0.05rem;
+}
+.show2 dl dd{
+	margin-top: 0.1rem;
+}
+.show2 dl dd img{
+	width: 1.66rem;
+	height: 1.66rem;
+}
+.show2 dl dt:first-child{
+	font-size: 0.2rem;
+}
+/*逛商场*/
+.box2{
+	width: 100%;
+	height: 1.68rem;
+	margin-top: 0.2rem;
+	overflow: hidden;
+	position: relative;
+}
+.banner2{
+	width: 46rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	background-color: yellow;
+}
+.banner2 img{
+	margin: 0rem 0.15rem;
+	width: 7.2rem;
+	height: 1.68rem;
+	border-radius: 0.1rem;
 }
