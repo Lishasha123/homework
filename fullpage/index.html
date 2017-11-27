@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<!--https://Lishasha123.github.io/homework/fullpage/index-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/jquery.fullpage.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/jquery.fullpage.js" ></script>
+		<style type="text/css">
+			#fullpage .section { 
+				text-align: center;
+		        font: 18px "Microsoft Yahei"; 
+		        color: #fff;
+		    }
+		    .section a{
+		    	text-decoration: none;
+		    }
+			#menu{
+				margin: 0px;
+				padding: 0px;
+				position: fixed;
+				top: 50%;
+				right: 20px;
+				margin-top: -150px;
+				z-index: 9;
+				list-style: none;
+			}
+			#menu li{
+				width: 100px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				margin-bottom: 10px;
+				background-color: blue;
+			}
+			#menu li a{
+				text-decoration: none;
+				color: #ffffff;
+				font-weight: bold;
+				display: block;
+			}
+			#menu .active a{
+				color: blue;
+				background-color: #ffffff;
+			}
+			 #fullpage .section:nth-child(1){
+				background-image:url(img/bg2_87283a0.jpg);
+				background-size: cover;
+			}
+			
+			.pageone { 
+				position: relative; 
+				width: 1280px; 
+				height: 840px;
+				margin: 0 auto; 
+				overflow: hidden;
+			}
+			.pageone span{
+				position: absolute;
+			}
+		    .pageone-1 {
+		    	 width: 79px; 
+		    	 height: 75px; 
+		    	 left: -501px; 
+		    	 top: -455px;
+		    	 z-index: 4; 
+		    	 background: url(img/shi1_75f744d.png);
+		    	 -webkit-transition: all 0.1s;
+		    	 }
+		    .active .pageone-1{
+		    	 left: 499px;
+		    	 top: 245px;
+		    	-webkit-transition:all 1s 1s linear;	
+		    }
+		   .pageone-2{ 
+		  	    width: 276px;
+		  	    height: 140px; 
+		  	    left: 1387px; 
+		  	    z-index: 1; 
+		  	    top: -359px; 
+		  	    background: url(img/shi2_29587be.png);
+		    	 -webkit-transition: all 0.1s;
+		  	    
+		  	}
+		  	.active .pageone-2{
+		  		left: 387px;
+		    	top:  295px;
+		    	-webkit-transition:all 1s 1s linear;
+		  	}
+		   .pageone-3 { 
+		  	    width: 173px;
+		  	    height: 233px;
+		  	    left: -619px; 
+		  	    z-index: 3; 
+		  	    top: -359px; 
+		  	    background: url(img/shi3_e2d0678.png);
+		    	 -webkit-transition: all 0.1s;
+		  	    
+		  	    }
+		  	.active .pageone-3{
+		  		left: 381px;
+		    	top:  341px;
+		    	-webkit-transition:all 1s 1s linear;
+		  	}
+		   .pageone-4 { 
+		  	    width: 286px; 
+		  	    height: 142px; 
+		  	    left: 1398px;
+		  	    z-index: 2; 
+		  	    top: -259px;
+		  	    background: url(img/shi4_e893f53.png);
+		    	-webkit-transition: all 0.1s;
+		  	    
+		  	 }
+		  	.active .pageone-4{
+		  		left: 398px;
+		    	top:  441px;
+		    	-webkit-transition:all 1s 1s linear;
+		  	}
+		   .pageone-5 { 
+		  	    width: 92px;
+		  	    height: 90px;
+		  	    left: -327px; 
+		  	    z-index: 2; 
+		  	    top: -589px;
+		  	    background: url(img/ji1_39b114b.png);
+		    	 -webkit-transition: all 0.1s;
+		  	    
+		  	}
+		  	.active .pageone-5{
+		  		left: 673px;
+		    	top:  111px;
+		    	-webkit-transition:all 1s 1s linear;
+		  	}
+		   .pageone-6 { 
+		 	    width: 127px;
+		 	    height: 234px; 
+		 	    left: 1648px; 
+		 	    z-index: 2; 
+		 	    top: -487px; 
+		 	    background: url(img/ji2_852cd0a.png);
+		    	 -webkit-transition: all 0.1s;
+		 	    
+		 	}
+		 	.active .pageone-6{
+		  		left: 648px;
+		    	top:  213px;
+		    	-webkit-transition:all 1s 1s linear;
+		  	}
+		   .pageone-7 { 
+			   width: 195px; 
+			   height: 293px; 
+			   left: -244px; 
+			   z-index: 2; 
+			   top: -488px; 
+			   background: url(img/ji3_a328316.png);
+		    	 -webkit-transition: all 0.1s;
+			   
+			}
+			.active .pageone-7{
+		  		left: 756px;
+		    	top:  212px;
+		    	-webkit-transition:all 1s 1s linear;
+		  	}
+		   .pageone-8 { 
+		  	   width: 68px; 
+		  	   height: 98px; 
+		  	   left: 1686px; 
+		  	   z-index: 2; 
+		  	   top: -213px; 
+		  	   background: url(img/2013-2_bf3a5a5.png);
+		       -webkit-transition: all 0.1s;
+		  	   
+		  	}
+		  	.active .pageone-8{
+		  		left: 686px;
+		    	top:  487px;
+		    	-webkit-transition:all 1s 1s linear;
+		  	}
+		  .pageone-9 { 
+		  	  width: 71px; 
+		  	  height: 97px; 
+		  	  left: -266px; 
+		  	  z-index: 2; 
+		  	  top: -189px; 
+		  	  background: url(img/2013-0_3cef07f.png);
+		       -webkit-transition: all 0.1s;
+		  	  
+		  	}
+		  	.active .pageone-9{
+		  		left: 734px;
+		    	top:  511px;
+		    	-webkit-transition:all 1s 1s linear;
+		  	}
+		  .pageone-10{ 
+		  	  width: 40px; 
+		  	  height: 99px; 
+		  	  left: 1792px; 
+		  	  z-index: 2; 
+		  	  top: -210px; 
+		  	  background: url(img/2013-1_0cb559a.png);
+		       -webkit-transition: all 0.1s;
+		  	  
+		  	}
+		  .active .pageone-10{
+		  		left: 792px;
+		    	top:  490px;
+		    	-webkit-transition:all 1s 1s linear;
+		  }
+		  .pageone-11 { 
+		  	   width: 66px; 
+		  	   height: 97px; 
+		  	   left: -173px; 
+		  	   z-index: 2; 
+		  	   top: -207px; 
+		  	   background: url(img/2013-3_596921f.png);
+		       -webkit-transition: all 0.1s;
+		  	   
+		  	}
+		  	.active .pageone-11{
+		  		left: 827px;
+		    	top:  493px;
+		    	-webkit-transition:all 1s 1s linear;
+		  	}
+		  .pageone-12 { 
+		  	   width: 363px; 
+		  	   height: 45px; 
+		  	   /*left: 1462px; 
+		  	   top: -106px;*/
+		  	   left: 462px;
+		    	top:  594px; 
+		  	   z-index: 1; 
+		  	   background: url(img/slogen_5635c9f.png);
+		  	   
+		  	}
+		  	.active .pageone-12{
+		  		/*left: 462px;
+		    	top:  594px;
+		    	-webkit-transition:all 1s 1s linear;*/
+		    	-webkit-animation: action 1s 1s ease-in-out;
+		  	}
+		    @-webkit-keyframes action{
+		        0%{
+			       opacity: 0;
+			       -webkit-transform: translateY(50px);
+		    }
+		
+		        50%{
+			       opacity: 1;
+			       -webkit-transform: translateY(0);
+		    }
+		        100%{
+			       opacity: 0;
+			       -webkit-transform: translateY(-20px);
+		   }
+	      }
+	      /*第二页*/
+			 #fullpage .section:nth-child(2){
+				background-image: url(img/bg-kj_4d6c383.png);
+			    background-size: cover;	
+			}
+			.pagetwo{
+				position: relative;
+				width: 980px; 
+				height: 840px;
+				margin: 0 auto; 
+				overflow: hidden;
+			}
+			.pagetwo a{
+				position: absolute;
+				color: #004b85;
+				float: left;
+				display: inline-block;
+				white-space: nowrap;
+			}
+			.pagetwo a:hover{
+				color: #1c9cff;
+			}
+			/*top*/
+			.pagetwo-1{
+			    padding-left: 37px; 
+			    background: url(img/num-keji_3f60772.png) 0 4px no-repeat;
+			    left: 0px;
+			    top:-350px ; 	
+		       -webkit-transition: all 0.1s;  
+			}
+			.active .pagetwo-1{
+				left: 0px;
+				top: 7px;
+		    	-webkit-transition:all 1s 1s linear;
+				
+			}
+			.pagetwo-2{
+			    padding-left: 37px; 
+			    background: url(img/num-keji_3f60772.png) 0 -59px no-repeat; 
+			    left: 0px;
+			    top: -350px;
+		       -webkit-transition: all 0.1s;  
+			}
+			.active .pagetwo-2{
+				left: 0px;
+				top: 37px;
+		    	-webkit-transition:all 1s 1s linear; 
+			}
+			.pagetwo-3{
+			    padding-left: 37px; 
+			    background: url(img/num-keji_3f60772.png) 0 -59px no-repeat; 	
+				left: 0px;
+			    top: -350px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-3{
+				left: 0px;
+				top: 68px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-4{
+			    padding-left: 37px; 
+			    background: url(img/num-keji_3f60772.png) 0 -106px no-repeat; 
+			    left: 0px;
+			    top: -350px;
+		       -webkit-transition: all 0.1s;		
+			}
+			.active .pagetwo-4{
+				left: 0px;
+				top: 88px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-18{
+				width: 181px;
+	            height: 166px;
+	            background-image: url(img/h7n9.jpg);
+	            background-size: cover;
+	            left: 0px;
+	            top: -350px;
+		       -webkit-transition: all 0.1s;
+	            
+			}
+			.active .pagetwo-18{
+				left: 0px;
+				top: 150px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			/*right*/
+			.pagetwo-5{
+			    padding-left: 37px; 
+			    background: url(img/num-keji_3f60772.png) 0 -195px no-repeat; 
+			    left: 1000px;
+			    top: 116px;
+		       -webkit-transition: all 0.1s;	
+				
+			}
+			.active .pagetwo-5{
+				left: 554px;
+				top: 116px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-6{
+			    padding-left: 37px; 
+			    background: url(img/num-keji_3f60772.png) 0 -267px no-repeat; 	
+				left: 1000px;
+			    top: 148px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-6{
+				left: 554px;
+				top: 148px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-7{
+			    padding-left: 37px; 
+			    background: url(img/num-keji_3f60772.png) 0 -244px no-repeat; 	
+				left: 1000px;
+			    top: 170px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-7{
+				left: 554px;
+				top: 170px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-8{
+			    padding-left: 37px; 
+			    background: url(img/num-keji_3f60772.png) 0 -267px no-repeat; 	
+				left: 1000px;
+			    top: 230px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-8{
+				left: 554px;
+				top: 230px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-19{
+				width: 313px;
+	            height: 317px;
+	            background-image: url(img/shenshi.png);
+	            background-size: cover;
+	            background-position: center;
+	            left: 1000px;
+	            top: 0px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-19{
+				left: 224px;
+				top: 0px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			/*left*/
+			.pagetwo-9{
+			    padding-right: 37px;
+			    background: url(img/num-keji_3f60772.png) 78px -350px no-repeat; 	
+				left: -800px;
+			    top: 346px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-9{
+				left: 290px;
+				top: 346px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-10{
+			    padding-right: 37px; 
+			    background: url(img/num-keji_3f60772.png) 79px -431px no-repeat; 	
+				left: -800px;
+			    top: 378px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-10{
+				left: 290px;
+				top: 378px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-11{
+			    padding-right: 37px; 
+			    background: url(img/num-keji_3f60772.png) 147px -502px no-repeat; 	
+				left: -800px;
+			    top: 410px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-11{
+				left: 220px;
+				top: 410px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-12{
+			    padding-right: 37px; 
+			    background: url(img/num-keji_3f60772.png) 342px -481px no-repeat; 	
+				left: -800px;
+			    top: 442px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-12{
+				left: 27px;
+				top: 442px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-20{
+			    width: 313px;
+	            height: 215px;
+	            background-image: url(img/zhuangbei.jpg);
+	            background-size: cover;
+	            background-position: center;
+	            left: -800px;
+			    top: 346px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-20{
+				left: 415px;
+				top: 346px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			/*bottom*/
+			.pagetwo-13{
+			    padding-left: 47px; 
+			    background: url(img/num-keji_3f60772.png) 0px -573px no-repeat; 	
+				left: 761px;
+			    top: 1000px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-13{
+				left: 761px;
+				top: 506px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+				
+			.pagetwo-14{
+			    padding-left: 47px; 
+			    background: url(img/num-keji_3f60772.png) 0px -626px no-repeat; 	
+				left: 761px;
+			    top: 1000px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-14{
+				left: 761px;
+				top: 524px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-15{
+			    padding-left: 47px; 
+			    background: url(img/num-keji_3f60772.png) 0px -646px no-repeat; 	
+				left: 761px;
+			    top: 1000px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-15{
+				left: 761px;
+				top: 592px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-16{
+			    padding-left: 47px; 
+			    background: url(img/num-keji_3f60772.png) 0px -646px no-repeat; 	
+				left: 761px;
+			    top: 1000px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-16{
+				left: 761px;
+				top: 620px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagetwo-17{
+			    padding-left: 47px; 
+			    background: url(img/num-keji_3f60772.png) 0px -732px no-repeat; 	
+				left: 761px;
+			    top: 1000px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-17{
+				left: 761px;
+				top: 648px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+	
+			.pagetwo-21{
+				width: 200px;
+	            height: 138px;
+	            background-image: url(img/bit.jpg);
+	            background-size: cover;
+	            background-position: center;
+	            left: 761px;
+			    top: 1000px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagetwo-21{
+				left: 761px;
+				top: 346px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			/*第三页*/
+			 #fullpage .section:nth-child(3){
+				background-image: url(img/renwu-bg_c26f167.png);
+			    background-size: cover;	
+			}
+			.pagethree{
+				position: relative; 
+				width: 1000px; 
+				height: 850px; 
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.pagethree a{
+				color: #8a5e25;
+				float: left; 
+				position: absolute; 
+				display: inline-block; 
+				white-space: nowrap; 
+			}
+			.pagethree a:hover{
+				color: #d58116
+			}
+			
+			/*top*/
+			.pagethree-1{
+				padding-right: 37px; 
+				background: url(img/num-renwu_3294764.png) 61px 4px no-repeat;
+				left: 90px;
+			    top: -300px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-1{
+				left: 90px;
+				top: 70px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-2{
+				padding-right: 37px; 
+				background: url(img/num-renwu_3294764.png) 61px -103px no-repeat;
+				left: 90px;
+			    top: -300px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-2{
+				left: 90px;
+				top: 100px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			
+			
+			.pagethree-3{
+				padding-right: 37px; 
+				font-size: 48px;
+				background: url(img/num-renwu_3294764.png) 151px -185px no-repeat;
+				left: 0px;
+			    top: -300px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-3{
+				left: 0px;
+				top: 130px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-16{
+	           width: 169px;
+	           height: 169px;
+	           background-image:url(img/guomu.jpg);
+	           background-size: cover;
+	           left: 210px;
+			   top: -300px;
+		       -webkit-transition: all 0.1s;
+            }
+            .active .pagethree-16{
+				left: 210px;
+				top: 20px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			/*right*/
+			.pagethree-4{
+				padding-left: 37px; 
+				background: url(img/num-renwu_3294764.png) 0px -312px no-repeat;
+				left: 1000px;
+			    top: 250px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-4{
+				left: 300px;
+				top: 250px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-5{
+				padding-left: 37px;
+				font-size: 48px; 
+				background: url(img/num-renwu_3294764.png) 0px -404px no-repeat;
+				left: 1000px;
+			    top: 280px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-5{
+				left: 300px;
+				top: 280px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-6{
+				padding-left: 37px;
+				background: url(img/num-renwu_3294764.png) 0px -426px no-repeat;
+				left: 1000px;
+			    top: 345px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-6{
+				left: 300px;
+				top: 345px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			 .pagethree-17{
+	           width: 284px;
+	           height: 211px;
+	           background-image:url(img/zhuli.jpg);
+	           background-size: cover;
+	           left: 1000px;
+			    top: 125px;
+		       -webkit-transition: all 0.1s;
+             }
+             .active .pagethree-17{
+				left: 670px;
+				top: 125px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			/*left*/
+			
+			.pagethree-7{
+				padding-left: 37px;
+				font-size: 48px;
+				background: url(img/num-renwu_3294764.png) 0px -404px no-repeat;
+				left: -800px;
+			    top: 400px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-7{
+				left: 80px;
+				top: 400px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-8{
+				padding-left: 47px;
+				background: url(img/num-renwu_3294764.png) 0px -762px no-repeat;
+				left: -800px;
+			    top: 600px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-8{
+				left: 120px;
+				top: 600px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-9{
+				padding-left: 47px;
+				background: url(img/num-renwu_3294764.png) 0px -901px no-repeat;
+				left: -800px;
+			    top: 630px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-9{
+				left: 120px;
+				top: 630px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-10{
+				padding-left: 47px;
+				background: url(img/num-renwu_3294764.png) 0px -1043px no-repeat;
+				left: -800px;
+			    top: 660px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-10{
+				left: 120px;
+				top: 660px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			 .pagethree-18{
+	           width: 139px;
+	           height: 86px;
+	           background-image: url(img/sinuodeng.jpg);
+	           background-size: cover;
+	           left: -800px;
+			   top: 480px;
+		       -webkit-transition: all 0.1s;
+            }
+            .active .pagethree-18{
+				left: 120px;
+				top: 480px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			/*right*/
+			.pagethree-11{
+				padding-left: 47px;
+				font-size: 48px;
+				background: url(img/num-renwu_3294764.png) 0px -520px no-repeat;
+				left: 1000px;
+			    top: 460px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-11{
+				left: 700px;
+				top: 460px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-12{
+				padding-left: 47px;
+				background: url(img/num-renwu_3294764.png) 0px -648px no-repeat;
+				left: 1000px;
+			    top: 520px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-12{
+				left: 700px;
+				top: 520px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-13{
+				padding-left: 47px;
+				background: url(img/num-renwu_3294764.png) 0px -648px no-repeat;
+				left: 1000px;
+			    top: 550px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-13{
+				left: 700px;
+				top: 550px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-14{
+				padding-left: 47px;
+				background: url(img/num-renwu_3294764.png) 0px -1185px no-repeat;
+				left: 1000px;
+			    top: 580px;
+		       -webkit-transition: all 0.1s;
+			}
+			.active .pagethree-14{
+				left: 700px;
+				top: 580px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			.pagethree-15{
+				padding-left: 47px;
+				background: url(img/num-renwu_3294764.png) 0px -1185px no-repeat;
+				left: 1000px;
+			    top: 610px;
+		       -webkit-transition: all 0.1s;
+			}
+		    .active .pagethree-15{
+				left: 700px;
+				top: 610px;
+		    	-webkit-transition:all 1s 1s linear;
+			}
+			
+           .pagethree-19{
+	         width: 491px;
+	         height: 328px;
+	         background-image: url(img/xiaohuangren.png);
+	         background-size: cover;
+	         left: 1000px;
+			 top: 460px;
+		     -webkit-transition: all 0.1s;
+            }
+            .active .pagethree-19{
+			    left: 210px;
+			    top: 460px;
+		       -webkit-transition:all 1s 1s linear;
+			}
+			/*第四页*/
+			 #fullpage .section:nth-child(4){
+				background-image:url(img/bj-net_3cad4e6.png);
+			    background-size: cover;	
+			}
+			 #fullpage .section:nth-child(5){
+				background-image:url(img/bj-net_3cad4e6.png);
+			    background-size: cover;		
+			}
+			 #fullpage .section:nth-child(6){
+				background-image:url(img/bj-net_3cad4e6.png);
+			    background-size: cover;		
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="menu">
+	     <li data-menuanchor="page1" class="active"><a href="#page1">TOP</a></li>
+	     <li data-menuanchor="page2"><a href="#page2">科技卷</a></li>
+	     <li data-menuanchor="page3"><a href="#page3">人物卷</a></li>
+	     <li data-menuanchor="page4"><a href="#page4">社会卷</a></li>
+	     <li data-menuanchor="page5"><a href="#page5">网络卷</a></li>
+	     <li data-menuanchor="page6"><a href="#page6">合作媒体</a></li>
+     </ul>
+		<div id="fullpage">
+			<div class="section">
+				<div class="pageone">
+					<span class="pageone-1"></span>
+					<span class="pageone-2"></span>
+					<span class="pageone-3"></span>
+					<span class="pageone-4"></span>
+					<span class="pageone-5"></span>
+					<span class="pageone-6"></span>
+					<span class="pageone-7"></span>
+					<span class="pageone-8"></span>
+					<span class="pageone-9"></span>
+					<span class="pageone-10"></span>
+					<span class="pageone-11"></span>
+					<span class="pageone-12"></span>
+				</div>
+			</div>
+			<div class="section">
+				<div class="pagetwo">
+		         <a class="pagetwo-1" href="javascript:void(0)">网络机顶盒</a>
+		         <a class="pagetwo-2" href="javascript:void(0)">干细胞人造肉</a>
+		         <a class="pagetwo-3" href="javascript:void(0)">3D涂鸦笔</a>
+		         <a class="pagetwo-4" href="javascript:void(0)" style="font-size: 48px;" >H7N9</a>
+		         <a class="pagetwo-5" href="javascript:void(0)" >测癌试纸</a>
+		         <a class="pagetwo-6" href="javascript:void(0)">辽宁号航空母舰</a>
+		         <a class="pagetwo-7" href="javascript:void(0)" style="font-size: 48px;">神舟十号飞船</a>
+		         <a class="pagetwo-8" href="javascript:void(0)">蛟龙号载人潜水器</a>
+		         <a class="pagetwo-9" href="javascript:void(0)">三亲婴儿</a>
+		         <a class="pagetwo-10" href="javascript:void(0)" >网格细胞</a>
+		         <a class="pagetwo-11" href="javascript:void(0)">好奇号火星探测器</a>
+		         <a class="pagetwo-12" href="javascript:void(0)" style="font-size: 48px;">穿戴式智能设备</a>
+		         <a class="pagetwo-13" href="javascript:void(0)">上帝粒子</a>
+		         <a class="pagetwo-14" href="javascript:void(0)" style="font-size: 48px;">比特币</a>
+		         <a class="pagetwo-15" href="javascript:void(0)">ISON彗星</a>
+		         <a class="pagetwo-16" href="javascript:void(0)">玉兔号</a>
+		         <a class="pagetwo-17" href="javascript:void(0)">4G</a>
+		         <a class="pagetwo-18" href="javascript:void(0)"></a>
+		         <a class="pagetwo-19" href="javascript:void(0)"></a>
+		         <a class="pagetwo-20" href="javascript:void(0)"></a>
+		         <a class="pagetwo-21" href="javascript:void(0)"></a>
+	         </div>
+
+			</div>
+			<div class="section">
+				<div class="pagethree">
+		            <a class="pagethree-1" href="javascript:void(0)" >龚爱爱</a>
+		            <a class="pagethree-2" href="javascript:void(0)" >李某某</a>
+		            <a class="pagethree-3" href="javascript:void(0)" >彭丽媛</a>
+		            <a class="pagethree-4" href="javascript:void(0)" >撒切尔夫人</a>
+		            <a class="pagethree-5" href="javascript:void(0)" >安吉丽娜•朱莉</a>
+		            <a class="pagethree-6" href="javascript:void(0)" >雷政富</a>
+		            <a class="pagethree-7" href="javascript:void(0)">斯诺登</a>
+		            <a class="pagethree-8" href="javascript:void(0)">陈永洲</a>
+		            <a class="pagethree-9" href="javascript:void(0)" >埃隆·马斯克</a>
+		            <a class="pagethree-10" href="javascript:void(0)">曼德拉</a>
+		            <a class="pagethree-11" href="javascript:void(0)">小黄人</a>
+		            <a class="pagethree-12" href="javascript:void(0)" >薄熙来</a>
+		            <a class="pagethree-13" href="javascript:void(0)" >薛蛮子</a>
+		            <a class="pagethree-14" href="javascript:void(0)">夏俊峰</a>
+		            <a class="pagethree-15" href="javascript:void(0)">万爱花</a>
+		            <a class="pagethree-16" href="javascript:void(0)" ></a>
+		            <a class="pagethree-17" href="javascript:void(0)" ></a>
+		            <a class="pagethree-18" href="javascript:void(0)"></a>
+		            <a class="pagethree-19" href="javascript:void(0)"></a>
+	</div></div>	
+			<div class="section">第四页</div>	
+			<div class="section">第五页</div>
+			<div class="section">第六页</div>
+			
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					navigation:false,
+				navigationPosition:"right",
+				menu:"#menu",
+//				sectionsColor:['red','yellow','blue','green','pink'],
+				anchors:["page1","page2","page3","page4","page5","page6"],
+				ScrollingSpend:700,
+				css3:true,
+				easingcss3:"ease",
+				
+			afterLoad:function(anchorLink,index){
+				
+				
+				
+				$(".zanzhu-con a").fadeIn(500);
+			},
+			onLeave:function(index,nextIndex,direction){
+				
+				
+				
+				$(".zanzhu-con a").fadeOut(500);
+					
+					
+				
+				
+			}
+				});
+			});
+		</script>
+		
+	</body>
+</html>
