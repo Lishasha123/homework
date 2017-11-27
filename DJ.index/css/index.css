@@ -248,7 +248,7 @@ a{
 	text-decoration: line-through;
 }
 .show1{
-	width: 100%;
+	margin: 0rem auto;
 	background-color: #ffffff;
 }
 .show1 dl{
@@ -265,8 +265,8 @@ a{
 	width: 3.32rem;
 }
 .show1 dl dd img{
-	width: 1.66rem;
-	height: 1.66rem;
+	width: 1.60rem;
+	height: 1.60rem;
 }
 .show1 dl dt:first-child{
 	font-size: 0.2rem;
@@ -312,7 +312,6 @@ a{
 	position: absolute;
 	top: 0rem;
 	left: 0rem;
-	background-color: yellow;
 }
 .banner2 img{
 	margin: 0rem 0.15rem;
