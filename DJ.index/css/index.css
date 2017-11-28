@@ -26,7 +26,6 @@ a{
 .main{
 	width: 100%;
 	height: 100vh;
-	background-color: red;
 	position: relative;
 }
 .main-1{
@@ -36,7 +35,7 @@ a{
 	left: 0rem;
 }
 .banner{
-	width: 7.5rem;
+	width: 100%;
 	height: 3.36rem;
 	position: relative;
 	overflow: hidden;
@@ -135,6 +134,7 @@ a{
 }
 .news{
 	overflow: hidden;
+	height: 0.3rem;
 	background-color: #ffffff;
 }
 .news-left{
@@ -162,6 +162,8 @@ a{
 	left: 0rem;
 }
 .news-left-list li{
+	height: 0.3rem;
+	line-height: 0.3rem;
 }
 .news-left-list li strong{
 	color: red;
@@ -253,20 +255,22 @@ a{
 }
 .show1 dl{
 	float: left;
+	width: 3.75rem;
 	padding: 0.1rem 0.2rem;
 	border-top: solid 1px #dddddd;
 	border-right: solid 1px #dddddd;
+	box-sizing: border-box;
 }
 .show1 dl dt{
 	margin-top: 0.05rem;
 }
 .show1 dl dd{
 	margin-top: 0.1rem;
-	width: 3.32rem;
+	/*width: 3.32rem;*/
 }
 .show1 dl dd img{
-	width: 1.60rem;
-	height: 1.60rem;
+	width: 1.66rem;
+	height: 1.66rem;
 }
 .show1 dl dt:first-child{
 	font-size: 0.2rem;
@@ -282,9 +286,11 @@ a{
 }
 .show2 dl{
 	float: left;
+	width: 1.875rem;
 	padding: 0.1rem 0.095rem;
 	border-top: solid 1px #dddddd;
 	border-right: solid 1px #dddddd;
+	box-sizing: border-box;
 }
 .show2 dl dt{
 	margin-top: 0.05rem;
@@ -298,6 +304,9 @@ a{
 }
 .show2 dl dt:first-child{
 	font-size: 0.2rem;
+}
+.show2 dl:last-child{
+	border-right: none;
 }
 /*逛商场*/
 .box2{
@@ -318,4 +327,65 @@ a{
 	width: 7.2rem;
 	height: 1.68rem;
 	border-radius: 0.1rem;
+}
+.show1-1 img{
+	margin-left: 1.66rem;
+}
+/*发现好店*/
+/*为你推荐*/
+.imgs img{
+	width: 7.2rem;
+	height: 1.7rem;
+	margin: 0.2rem 0.16rem;
+}
+.container{
+	width: 100%;
+}
+.container span{
+	float: left;
+	width: 2.8rem;
+	border: solid 1px #a9a9b3;
+	margin-top: 0.07rem;
+}
+.container .first{
+	margin-right: 0.6rem;
+}
+.tmp{
+	width: 100%;
+	margin-top: 0.2rem;
+}
+.tmp dl{
+	float: left;
+	background-color: #ffffff;
+	width: 3.7rem;
+	padding-bottom: 0.15rem;
+	font-size: 0.16rem;
+	margin-right: 0.05rem;
+	margin-bottom: 0.05rem;
+}
+.tmp dl dt{
+	width: 3.7rem;
+}
+.tmp dl dt img{
+	width: 3.7rem;
+	
+}
+.tmp dl dd {
+	line-height: 0.22rem;
+	padding: 0rem 0.1rem;
+}
+.tmp .price{
+	margin: 0.1rem 0rem;
+	color: #ee1e32;
+}
+.tmp  .span1{
+	color: #dddddd;
+	font-size: 0.12rem;
+}
+.tmp .span2{
+	color: #D4D4D4;
+	float: right;
+	border: solid 1px #dddddd;
+	padding: 0.05rem;
+	
 }
