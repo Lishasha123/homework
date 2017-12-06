@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 400px;
+				height: 300px;
+				border: solid 1px red;
+				margin: 40px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.blue{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				background-image: url(img/blue.png);
+				background-size: cover;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>	
+	    <script type="text/javascript">
+		var box=document.querySelector(".box");
+		var boxW=400;
+		var boxH=300;
+		var bubble=[];
+		function qipao(){
+		  this.w=Math.random()*20+20;
+		  this.h=this.w;
+		  this.x=Math.random()*boxW;
+		  this.y=Math.random()*boxH;
+		  //圆心
+		  this.x0=this.x+this.w/2;
+		  this.y0=this.y+this.w/2;
+		  this.d=Math.PI/180*Math.random()*360;
+		  this.v=5;
+		  this.speedx=Math.cos(this.d)*this.v;
+		  this.speedy=Math.sin(this.d)*this.v;
+		  this.div=document.createElement("div");
+		  this.Init=function(){
+		  	this.div.setAttribute("class","blue");
+		  	this.div.style.width=this.w+"px";
+		  	this.div.style.height=this.h+"px";
+		  	this.setPosition(this.x,this.y);
+		  	box.appendChild(this.div);
+		  }
+		  this.move=function(){
+		  	
+		  	this.setPosition(this.x+this.speedx,this.y+this.speedy);
+		  	
+		  	
+		  }
+		  this.setPosition=function(x,y){
+		  	x=x<this.w*-1?boxW:x;
+		  	x=x>boxW?this.w*-1:x;
+		  	y=y<this.h*-1?boxH:y;
+		  	y=y>boxH?this.h*-1:y;
+		  	this.x=x;
+		  	this.y=y;
+		  	this.x0=this.x+this.w/2;
+		    this.y0=this.y+this.w/2;
+		  	this.div.style.left=this.x+"px";
+		  	this.div.style.top=this.y+"px";
+		  	
+		  }
+		  //判断是否碰撞
+		  this.check=function(){
+		  	for(var i=0;i<bubble.length;i++){
+		  		if(this!=bubble[i]){
+		  		var r= Math.pow((this.w+bubble[i].w)/2,2);
+		  		var R=Math.pow((bubble[i].x0-this.x0),2)+Math.pow((bubble[i].y0-this.y0),2);
+		  		if(r>=R){
+		  		return bubble[i];
+		  		}
+		  	  }
+		  	}
+		  	return null;	
+		}
+       //		 碰撞后交换位置 
+		this.bomb=function(ball){
+			var ball=this.check();
+			 if(ball!=null){
+			  var tem=this.speedx;
+			     this.speedx=ball.speedx;
+			     ball.speedx=tem;
+			  var tmp=this.speedy;
+			      this.speedy=ball.speedy;
+			      ball.speedy=tmp; 	
+			while(this.check()!=null){
+				  this.move();
+			}
+		}
+	}
+		this.Init();
+		
+}
+		
+		
+		for(var i=0;i<10;i++){
+			var ball=new qipao();
+			bubble.push(ball);
+		}
+		var red={
+			move:function(){},
+			setPosition:function(x,y){
+			x=x<0?0:x;
+			x=x>(boxW-this.w)?(boxW-this.w):x;
+			y=y<0?0:y;
+			y=y>(boxH-this.h)?(boxH-this.h):y;
+			this.x=x;
+			this.y=y;
+			this.x0=this.x+this.w/2;
+		    this.y0=this.y+this.w/2;
+			this.div.style.left=this.x+"px";
+			this.div.style.top=this.y+"px";
+			}
+			
+		};
+		bubble.push(red);
+		red.__proto__=new qipao();
+		red.div.style.backgroundImage='url(img/red.png)';
+		box.onmousemove=function(e){
+			var x=e.pageX-this.offsetLeft;
+			var y=e.pageY-this.offsetTop;
+			red.setPosition(x,y);
+		}
+		console.log(bubble.length);
+		setInterval(function(){
+				for(var i=0;i<bubble.length;i++){
+					bubble[i].move();
+					bubble[i].bomb();
+					
+				}
+			},50);
+	  </script>
+	</body>
+</html>
